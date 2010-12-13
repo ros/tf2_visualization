@@ -14,16 +14,4 @@ syntax: regexp
 ^build
 ^kdl/include
 ^eigen/include
-^eigen3/include
 .*\.pyc
-^bullet/installed
-^bullet/wiped
-^kdl/installed
-^kdl/lib/pkgconfig/orocos-kdl.pc
-^kdl/share/orocos-kdl/orocos-kdl-config.cmake
-^kdl/wiped
-^tf/test/btTest
-^tf/test/testBroadcaster
-^tf/test/testListener
-^tf/test/transform_listener_unittest
-^tf2_msgs/src/tf2_msgs/__init__.py

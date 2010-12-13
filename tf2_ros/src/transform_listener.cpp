@@ -35,20 +35,8 @@
 using namespace tf2;
 
 
-TransformListener::TransformListener(tf2::BufferCore& buffer, bool spin_thread):
+TransformListener::TransformListener(tf2::Buffer& buffer, bool spin_thread):
   dedicated_listener_thread_(NULL), buffer_(buffer), using_dedicated_thread_(false)
-{
-  if (spin_thread)
-    initWithThread();
-  else
-    init();
-}
-
-TransformListener::TransformListener(tf2::BufferCore& buffer, const ros::NodeHandle& nh, bool spin_thread)
-: dedicated_listener_thread_(NULL)
-, node_(nh)
-, buffer_(buffer)
-, using_dedicated_thread_(false)
 {
   if (spin_thread)
     initWithThread();
