@@ -34,7 +34,7 @@
 #* 
 #* Author: Eitan Marder-Eppstein
 #***********************************************************
-import roslib; roslib.load_manifest('tf2_tools')
+import roslib; roslib.load_manifest('tf2_visualization')
 import rospy
 
 import wxversion
