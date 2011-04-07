@@ -57,8 +57,8 @@ import os
 
 import rosgraph.masterapi
 
-from tf2_tools.frame_viewer_panel import FrameViewerPanel
-from tf2_tools.tf_interface import TFInterface
+from tf2_visualization.frame_viewer_panel import FrameViewerPanel
+from tf2_visualization.tf_interface import TFInterface
 
 class FrameViewerFrame(wx.Frame):
     def __init__(self, tf_interface):

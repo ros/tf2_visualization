@@ -196,11 +196,11 @@ class TFInterface(object):
             if el == self.selected_child:
                 node_color = 'green'
                 arrow_color = 'green'
-            dot += el
+            dot += "\"" + el + "\""
             dot += '['
-            dot += 'shape=ellipse style=filled fillcolor=' + node_color + ' '
+            dot += 'shape=ellipse style=filled fillcolor="' + node_color + '" '
             dot += 'URL="' + map['parent'] + '-' + el + '"] '
-            dot += '"'+map['parent']+'" -> "'+el+'" [color=' + arrow_color + ']'
+            dot += '"'+map['parent']+'" -> "'+el+'" [color="' + arrow_color + '"]'
             if full_info:
                 dot += '[label=" '
                 dot += 'Broadcaster: '+map['broadcaster']+'\\n'
@@ -212,7 +212,7 @@ class TFInterface(object):
             if not map['parent'] in data:
                 root = map['parent']
                 if map['parent'] == self.selected_parent:
-                    dot += root + '[fillcolor=green style=filled]'
+                    dot += "\"" + root + "\"" + '[fillcolor="green" style="filled"]'
         dot += 'edge [style=invis];\n'
         dot += ' subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";\n'
         dot += '"Recorded at time: '+str(self.data_timestamp)+'"[ shape=plaintext ] ;\n'
